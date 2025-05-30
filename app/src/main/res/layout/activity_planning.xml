@@ -4,21 +4,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/white">
-
+    android:background="@drawable/gradient_background">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" Planning"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:gravity="center"
         android:layout_marginBottom="10dp" />
+
+    <!-- ✅ Image du planning -->
+    <ImageView
+        android:id="@+id/imagePlanning"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/planning_image"
+        android:layout_marginBottom="12dp"
+
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPlanning"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp" />
+
 </LinearLayout>

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#F5F5F5"
+    android:background="@drawable/gradient_background"
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Assistant Gemini 🤖"
+        android:text="Assistant Gemini"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:textColor="#222"
+        android:textColor="@color/white"
         android:gravity="center"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        
+      />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Envoyer"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/teal_200"
             android:textColor="@android:color/white"
             android:layout_marginStart="8dp"/>
     </LinearLayout>

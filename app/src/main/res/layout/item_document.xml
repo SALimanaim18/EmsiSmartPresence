@@ -4,13 +4,17 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     android:elevation="6dp"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:background="@drawable/gradient_background"
+    >
 
     <LinearLayout
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        >
 
         <TextView
             android:id="@+id/tvTitre"
@@ -39,7 +43,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ouvrir le PDF"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/green"
+            />
         <Button
             android:id="@+id/btnSupprimer"
             android:layout_width="wrap_content"

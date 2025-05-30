@@ -36,7 +36,6 @@ public class AjouterDocumentActivity extends AppCompatActivity {
         editTitre = findViewById(R.id.editTitre);
         editDescription = findViewById(R.id.editDescription);
         btnChoisirFichier = findViewById(R.id.btnChoisirFichier);
-        btnTeleverser = findViewById(R.id.btnTeleverser);
 
         btnChoisirFichier.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);

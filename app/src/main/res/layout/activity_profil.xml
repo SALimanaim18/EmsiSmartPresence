@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@android:color/white">
+    android:background="@drawable/gradient_background">
 
     <ImageView
         android:id="@+id/imgProfil"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Modifier mon profil"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#03A9F4"
         android:textColor="@android:color/white"
         android:paddingHorizontal="24dp"/>
 </LinearLayout>

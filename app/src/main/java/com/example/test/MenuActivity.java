@@ -35,6 +35,7 @@ public class MenuActivity extends AppCompatActivity {
     private TextView tvGreeting, tvNom;
     private ImageView imgUser;
     private Button btnVoirProfil; // ✅ Nouveau bouton
+    private Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,20 @@ public class MenuActivity extends AppCompatActivity {
         chargerInfosProf();
         setupCardListeners();
         requestLocation();
+        btnLogout = findViewById(R.id.btnLogout);
+
+        btnLogout.setOnClickListener(v -> {
+            mAuth.signOut(); // Déconnexion de Firebase
+            Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish(); // Ferme l'activité actuelle
+        });
+        if (mAuth.getCurrentUser() == null) {
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
+        }
+
     }
 
     private void chargerInfosProf() {
@@ -110,30 +125,20 @@ public class MenuActivity extends AppCompatActivity {
 
 
     private void setupCardListeners() {
-        findViewById(R.id.card_factures).setOnClickListener(v -> startActivity(new Intent(this, RattrapageActivity.class)));
         findViewById(R.id.card_annonces).setOnClickListener(v -> startActivity(new Intent(this, AjouterAbsenceActivity.class)));
         findViewById(R.id.card_historique).setOnClickListener(v -> startActivity(new Intent(this, HistoriqueActivity.class)));
-        findViewById(R.id.card_reclamations).setOnClickListener(v -> startActivity(new Intent(this, ReclamationsActivity.class)));
         findViewById(R.id.card_proximite).setOnClickListener(v -> startActivity(new Intent(this, MapActivity.class)));
         findViewById(R.id.card_planning).setOnClickListener(v -> startActivity(new Intent(this, PlanningActivity.class)));
         findViewById(R.id.card_documents).setOnClickListener(v -> startActivity(new Intent(this, DocumentsActivity.class)));
-        findViewById(R.id.card_logout).setOnClickListener(v -> {
-            mAuth.signOut();
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
-        });
+
+
 
         // Assistant virtuel
         findViewById(R.id.card_assistant).setOnClickListener(v -> {
             Intent intent = new Intent(this, GeminiChatActivity.class);
             startActivity(intent);
         });
-        findViewById(R.id.card_guide).setOnClickListener(v -> {
-            Intent intent = new Intent(this, GuideProfActivity.class);
-            startActivity(intent);
-        });
+
 
     }
 

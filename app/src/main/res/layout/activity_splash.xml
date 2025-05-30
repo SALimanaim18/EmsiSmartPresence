@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_gradient_background">
+
+    <!-- Logo with burst animation -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:background="@drawable/logobg"
+        android:src="@drawable/logo_emsi1"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        android:animation="@anim/burst_animation"/>
+
+    <!-- Tagline with typewriter effect -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Innovate. Create. Succeed."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:visibility="invisible"/>
+
+    <!-- Custom-styled progress bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:progressTint="@color/white"
+        android:progressBackgroundTint="@color/teal_200"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:progress="0"
+        android:max="100"/>
+</RelativeLayout>

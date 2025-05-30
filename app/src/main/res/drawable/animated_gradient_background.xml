@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <shape>
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:startColor="@color/teal_200"
+                android:endColor="@color/green"
+                android:gradientRadius="80%"/>
+        </shape>
+    </item>
+    <transition android:fromId="@+id/root_layout" android:toId="@+id/root_layout">
+        <animation-list>
+            <item android:duration="3000">
+                <shape>
+                    <gradient
+                        android:type="radial"
+                        android:centerX="50%"
+                        android:centerY="50%"
+                        android:startColor="@color/green"
+                        android:endColor="@color/teal_200"
+                        android:gradientRadius="80%"/>
+                </shape>
+            </item>
+            <item android:duration="3000">
+                <shape>
+                    <gradient
+                        android:type="radial"
+                        android:centerX="50%"
+                        android:centerY="50%"
+                        android:startColor="@color/teal_200"
+                        android:endColor="@color/green"
+                        android:gradientRadius="80%"/>
+                </shape>
+            </item>
+        </animation-list>
+    </transition>
+</animated-selector>
