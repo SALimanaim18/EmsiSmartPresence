@@ -71,17 +71,13 @@ cd EMSI-SmartPresence
 - Cloud-based real-time database ensures data consistency  
 - Role-based access for sensitive educational information
 
-## Features Details (EMSI SmartPresence Version)
+## Features Details 
 
-The **EMSI SmartPresence** application integrates a set of features designed to meet the specific needs of teachers while ensuring **system scalability**.
-
-### Key Features:
 - **Firebase Initial Authentication**: Secure database connection.
 - **Modern Home Interface**: Welcome card and main menu organized in a grid.
 - **Firestore Hierarchical Navigation**:
 Teachers can view **cities**, **schools**, **grades**, **groups**, and **students** thanks to a clear and well-designed structure.
 - **Attendance Marking**:
-Each student has a button to change their attendance status directly in the database.
 - **Automatic Test Data Generation**: Facilitates application development and demonstration.
 - **Potential Google Maps integration**: Allows users to locate EMSI facilities.
 - **Material Design interface**: Smooth, intuitive, and compliant with Android standards.
